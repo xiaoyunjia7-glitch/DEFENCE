@@ -3,7 +3,10 @@ export enum GameStatus {
   PLAYING = 'PLAYING',
   WON = 'WON',
   LOST = 'LOST',
-  ROUND_END = 'ROUND_END'
+  ROUND_END = 'ROUND_END',
+  INFINITE_CHOICE = 'INFINITE_CHOICE',
+  INFINITE_WON = 'INFINITE_WON',
+  SHOP = 'SHOP'
 }
 
 export interface Point {
@@ -20,6 +23,7 @@ export interface Rocket extends Entity {
   targetY: number;
   speed: number;
   progress: number; // 0 to 1
+  isBoss?: boolean;
 }
 
 export interface Interceptor extends Entity {
